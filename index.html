@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4-Week Postpartum Beginner Workout Plan</title>
+<style>
+  :root {
+    --rose:       #f4a7b9;
+    --rose-light: #fce4ec;
+    --rose-deep:  #e07a96;
+    --lavender:   #c9b8e8;
+    --lav-light:  #ede7f6;
+    --lav-deep:   #9c7ec4;
+    --cream:      #fdf6ee;
+    --peach:      #fddbb4;
+    --peach-deep: #f4a261;
+    --sage:       #b2d8c8;
+    --sage-deep:  #6aab8e;
+    --text:       #3d2c35;
+    --text-mid:   #6b4f5c;
+    --text-light: #9e7a8a;
+    --white:      #ffffff;
+    --shadow:     rgba(180,120,150,0.12);
+    --shadow-md:  rgba(180,120,150,0.22);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  .hero {
+    background: linear-gradient(135deg, #fce4ec 0%, #ede7f6 50%, #fddbb4 100%);
+    padding: 56px 24px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f4a7b9' fill-opacity='0.12'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--rose);
+    color: var(--white);
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .hero h1 em { color: var(--rose-deep); font-style: italic; }
+  .hero p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: var(--text-mid);
+    max-width: 560px;
+    margin: 0 auto 32px;
+  }
+
+  /* ── PROGRESS JOURNEY ── */
+  .journey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .journey-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+  }
+  .journey-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: calc(50% + 20px);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--rose), var(--lavender));
+  }
+  .journey-dot {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px; font-weight: 700;
+    color: var(--white);
+    box-shadow: 0 4px 12px var(--shadow-md);
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  .journey-dot:hover { transform: scale(1.1); }
+  .journey-dot.w1 { background: linear-gradient(135deg, #f4a7b9, #e07a96); }
+  .journey-dot.w2 { background: linear-gradient(135deg, #c9b8e8, #9c7ec4); }
+  .journey-dot.w3 { background: linear-gradient(135deg, #b2d8c8, #6aab8e); }
+  .journey-dot.w4 { background: linear-gradient(135deg, #fddbb4, #f4a261); }
+  .journey-label {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: var(--text-mid);
+    font-weight: 600;
+    text-align: center;
+    width: 80px;
+  }
+
+  /* ── SAFETY BANNER ── */
+  .safety-section {
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+  }
+  .safety-card {
+    background: linear-gradient(135deg, #fff9f0, #fff0f5);
+    border: 2px solid var(--rose);
+    border-radius: 20px;
+    padding: 32px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .safety-card::before {
+    content: '🌸';
+    position: absolute;
+    top: -10px; right: 20px;
+    font-size: 80px;
+    opacity: 0.08;
+  }
+  .safety-card h2 {
+    font-size: 22px;
+    color: var(--rose-deep);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .safety-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .safety-item {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 16px 18px;
+    border-left: 4px solid var(--rose);
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  .safety-item.warn { border-left-color: #e07a96; }
+  .safety-item.info { border-left-color: var(--lavender); }
+  .safety-item.tip  { border-left-color: var(--sage-deep); }
+  .safety-item h4 {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    margin-bottom: 6px;
+  }
+  .safety-item p {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+  .stop-signs {
+    background: #fff5f7;
+    border-radius: 12px;
+    padding: 16px 20px;
+    border: 1px solid #f4a7b9;
+  }
+  .stop-signs h4 {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #c0395a;
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .stop-signs ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+  }
+  .stop-signs li {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    background: #fce4ec;
+    color: #c0395a;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  /* ── WEEK TABS ── */
+  .tabs-section {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+  }
+  .tabs-header {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .tab-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 16px 16px 0 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+    background: var(--white);
+    color: var(--text-light);
+    box-shadow: 0 -2px 8px var(--shadow);
+    position: relative;
+    bottom: -2px;
+  }
+  .tab-btn:hover { color: var(--text); transform: translateY(-2px); }
+  .tab-btn.active {
+    color: var(--white);
+    bottom: 0;
+    z-index: 2;
+    box-shadow: 0 -4px 16px var(--shadow-md);
+  }
+  .tab-btn.w1.active { background: linear-gradient(135deg, #f4a7b9, #e07a96); }
+  .tab-btn.w2.active { background: linear-gradient(135deg, #c9b8e8, #9c7ec4); }
+  .tab-btn.w3.active { background: linear-gradient(135deg, #b2d8c8, #6aab8e); }
+  .tab-btn.w4.active { background: linear-gradient(135deg, #fddbb4, #f4a261); }
+  .tab-btn .week-num { font-size: 18px; display: block; }
+  .tab-btn .week-theme { font-size: 11px; opacity: 0.8; }
+
+  /* ── WEEK PANEL ── */
+  .week-panel {
+    display: none;
+    background: var(--white);
+    border-radius: 0 16px 16px 16px;
+    box-shadow: 0 8px 32px var(--shadow);
+    padding: 36px 32px;
+    animation: fadeIn 0.35s ease;
+  }
+  .week-panel.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  .week-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 36px;
+    padding: 24px;
+    border-radius: 16px;
+    background: var(--cream);
+  }
+  .week-icon { font-size: 48px; flex-shrink: 0; }
+  .week-intro h2 { font-size: 26px; margin-bottom: 6px; }
+  .week-intro p { font-family: 'Arial', sans-serif; font-size: 14px; color: var(--text-mid); }
+  .week-tag {
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+  }
+  .w1 .week-tag { background: var(--rose-light); color: var(--rose-deep); }
+  .w2 .week-tag { background: var(--lav-light); color: var(--lav-deep); }
+  .w3 .week-tag { background: #e8f5e9; color: var(--sage-deep); }
+  .w4 .week-tag { background: #fff3e0; color: var(--peach-deep); }
+
+  /* ── SESSION ── */
+  .session {
+    margin-bottom: 40px;
+  }
+  .session-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 2px dashed var(--rose-light);
+  }
+  .session-num {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px; font-weight: 700;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+  .w1 .session-num { background: linear-gradient(135deg, var(--rose), var(--rose-deep)); }
+  .w2 .session-num { background: linear-gradient(135deg, var(--lavender), var(--lav-deep)); }
+  .w3 .session-num { background: linear-gradient(135deg, var(--sage), var(--sage-deep)); }
+  .w4 .session-num { background: linear-gradient(135deg, var(--peach), var(--peach-deep)); }
+  .session-title { font-size: 20px; }
+  .session-meta {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: var(--text-light);
+  }
+
+  /* ── EXERCISE GRID ── */
+  .exercises-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  /* ── EXERCISE CARD ── */
+  .ex-card {
+    background: var(--white);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px var(--shadow);
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: 1px solid rgba(244,167,185,0.2);
+  }
+  .ex-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px var(--shadow-md);
+  }
+
+  /* ── VIDEO THUMBNAIL ── */
+  .video-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #1a1a2e;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .video-wrap iframe,
+  .video-wrap .thumb-img {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+  .video-wrap .thumb-img {
+    object-fit: cover;
+    transition: opacity 0.3s;
+  }
+  .video-wrap .play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.25);
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .play-btn-circle {
+    width: 56px; height: 56px;
+    background: rgba(255,255,255,0.92);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+  .play-btn-circle svg { width: 22px; height: 22px; fill: #e07a96; margin-left: 3px; }
+  .video-wrap:hover .play-btn-circle { transform: scale(1.1); }
+  .video-wrap.playing .thumb-img,
+  .video-wrap.playing .play-overlay { opacity: 0; pointer-events: none; }
+  .video-wrap iframe { opacity: 0; transition: opacity 0.3s; }
+  .video-wrap.playing iframe { opacity: 1; }
+
+  /* ── CARD BODY ── */
+  .ex-body { padding: 18px 20px 20px; }
+  .ex-name {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .ex-sets {
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  .w1 .ex-sets { background: var(--rose-light); color: var(--rose-deep); }
+  .w2 .ex-sets { background: var(--lav-light); color: var(--lav-deep); }
+  .w3 .ex-sets { background: #e8f5e9; color: var(--sage-deep); }
+  .w4 .ex-sets { background: #fff3e0; color: var(--peach-deep); }
+  .ex-desc {
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+  .ex-tip {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: var(--cream);
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: var(--text-light);
+    border-left: 3px solid var(--rose);
+  }
+  .ex-tip strong { color: var(--rose-deep); }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 48px 24px;
+    margin-top: 60px;
+    background: linear-gradient(135deg, #fce4ec, #ede7f6);
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: var(--text-mid);
+  }
+  footer p { max-width: 600px; margin: 0 auto 8px; }
+  footer .heart { color: var(--rose-deep); font-size: 20px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .hero { padding: 40px 16px 36px; }
+    .week-panel { padding: 24px 16px; }
+    .exercises-grid { grid-template-columns: 1fr; }
+    .tab-btn { min-width: 80px; padding: 10px 12px; }
+    .tab-btn .week-num { font-size: 15px; }
+    .safety-card { padding: 24px 20px; }
+    .week-intro { flex-direction: column; gap: 12px; }
+    .journey-step:not(:last-child)::after { width: 30px; left: calc(50% + 20px); }
+  }
+  @media (max-width: 480px) {
+    .journey { gap: 4px; }
+    .journey-label { width: 60px; font-size: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<header class="hero">
+  <div class="hero-badge">Postpartum Recovery</div>
+  <h1>Your <em>4-Week</em> Postpartum<br>Beginner Workout Plan</h1>
+  <p>A gentle, evidence-informed program to help you reconnect with your body, restore your core, and rebuild strength — one breath at a time.</p>
+
+  <div class="journey">
+    <div class="journey-step">
+      <div class="journey-dot w1" onclick="switchTab(1)">1</div>
+      <div class="journey-label">Reconnect<br>& Breathe</div>
+    </div>
+    <div class="journey-step">
+      <div class="journey-dot w2" onclick="switchTab(2)">2</div>
+      <div class="journey-label">Activate<br>& Stabilize</div>
+    </div>
+    <div class="journey-step">
+      <div class="journey-dot w3" onclick="switchTab(3)">3</div>
+      <div class="journey-label">Strengthen<br>& Mobilize</div>
+    </div>
+    <div class="journey-step">
+      <div class="journey-dot w4" onclick="switchTab(4)">4</div>
+      <div class="journey-label">Build<br>& Progress</div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SAFETY SECTION
+═══════════════════════════════════════════════════════════ -->
+<section class="safety-section">
+  <div class="safety-card">
+    <h2>🌸 Safety First — Please Read Before Starting</h2>
+    <div class="safety-grid">
+      <div class="safety-item">
+        <h4>🩺 Doctor Clearance</h4>
+        <p>Always get clearance from your OB, midwife, or healthcare provider before starting any postpartum exercise program. Typically 6 weeks after vaginal birth, 8–12 weeks after C-section.</p>
+      </div>
+      <div class="safety-item info">
+        <h4>💜 Diastasis Recti Awareness</h4>
+        <p>Avoid traditional crunches, sit-ups, or any exercise that causes your belly to "dome" or "cone." Focus on deep core breathing and gentle activation first. Consult a pelvic floor PT if unsure.</p>
+      </div>
+      <div class="safety-item tip">
+        <h4>🌿 Pelvic Floor Considerations</h4>
+        <p>If you experience leaking, heaviness, or pressure in your pelvis during any exercise, stop immediately. These are signs to reduce intensity and consult a pelvic floor physiotherapist.</p>
+      </div>
+      <div class="safety-item warn">
+        <h4>🤱 Breastfeeding Note</h4>
+        <p>Stay well-hydrated. Relaxin hormone remains elevated while breastfeeding, making joints more mobile and prone to injury. Avoid overstretching and prioritize stability exercises.</p>
+      </div>
+    </div>
+    <div class="stop-signs">
+      <h4>🛑 Stop Exercising Immediately If You Experience:</h4>
+      <ul>
+        <li>Increased vaginal bleeding</li>
+        <li>Pelvic pain or pressure</li>
+        <li>Chest pain or shortness of breath</li>
+        <li>Dizziness or lightheadedness</li>
+        <li>Urinary or bowel leakage</li>
+        <li>Abdominal "doming" or coning</li>
+        <li>Severe fatigue or pain</li>
+        <li>Incision pain (C-section)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     WEEK TABS
+═══════════════════════════════════════════════════════════ -->
+<section class="tabs-section">
+  <div class="tabs-header">
+    <button class="tab-btn w1 active" onclick="switchTab(1)">
+      <span class="week-num">Week 1</span>
+      <span class="week-theme">Reconnect & Breathe</span>
+    </button>
+    <button class="tab-btn w2" onclick="switchTab(2)">
+      <span class="week-num">Week 2</span>
+      <span class="week-theme">Activate & Stabilize</span>
+    </button>
+    <button class="tab-btn w3" onclick="switchTab(3)">
+      <span class="week-num">Week 3</span>
+      <span class="week-theme">Strengthen & Mobilize</span>
+    </button>
+    <button class="tab-btn w4" onclick="switchTab(4)">
+      <span class="week-num">Week 4</span>
+      <span class="week-theme">Build & Progress</span>
+    </button>
+  </div>
+
+  <!-- ══════════ WEEK 1 ══════════ -->
+  <div id="week1" class="week-panel w1 active">
+    <div class="week-intro">
+      <div class="week-icon">🌱</div>
+      <div>
+        <span class="week-tag">Week 1</span>
+        <h2>Reconnect & Breathe</h2>
+        <p>This week is all about gently waking up your deep core and pelvic floor. Focus on breath, awareness, and very gentle movement. Rest is part of recovery — listen to your body above all else.</p>
+      </div>
+    </div>
+
+    <!-- Session 1 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S1</div>
+        <div>
+          <div class="session-title">Session 1 — Breath & Pelvic Floor</div>
+          <div class="session-meta">~15 minutes · No equipment · Low intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="ThKahimNQP0">
+            <img class="thumb-img" src="https://img.youtube.com/vi/ThKahimNQP0/hqdefault.jpg" alt="Diaphragmatic Breathing" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Diaphragmatic Breathing"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Diaphragmatic Breathing</div>
+            <span class="ex-sets">3 sets × 10 breaths</span>
+            <p class="ex-desc">Lie on your back with knees bent. Place one hand on your chest, one on your belly. Inhale slowly through your nose, letting your belly rise. Exhale fully through pursed lips, feeling your belly fall. This reconnects your diaphragm and pelvic floor.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Feel your pelvic floor gently descend on the inhale and lift on the exhale.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="AfyIQu8nTcI">
+            <img class="thumb-img" src="https://img.youtube.com/vi/AfyIQu8nTcI/hqdefault.jpg" alt="Pelvic Floor Activation" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Pelvic Floor Activation"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Pelvic Floor Activation (Kegels)</div>
+            <span class="ex-sets">3 sets × 8 holds (3 sec each)</span>
+            <p class="ex-desc">Lying on your back, gently contract your pelvic floor muscles as if stopping the flow of urine. Hold for 3 seconds, then fully release for 6 seconds. Focus on the release as much as the contraction — both are equally important.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Never hold your breath. Breathe normally throughout each hold.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="6-anByqnKp8">
+            <img class="thumb-img" src="https://img.youtube.com/vi/6-anByqnKp8/hqdefault.jpg" alt="Heel Slides" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Heel Slides"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Heel Slides</div>
+            <span class="ex-sets">3 sets × 10 reps each side</span>
+            <p class="ex-desc">Lie on your back, knees bent. Exhale and gently engage your core. Slowly slide one heel along the floor until your leg is straight, then slide it back. Keep your lower back in contact with the floor throughout the movement.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Exhale as you extend the leg. If your back arches, reduce the range of motion.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Session 2 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S2</div>
+        <div>
+          <div class="session-title">Session 2 — Gentle Mobility</div>
+          <div class="session-meta">~15 minutes · No equipment · Low intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="YauKps6MGIE">
+            <img class="thumb-img" src="https://img.youtube.com/vi/YauKps6MGIE/hqdefault.jpg" alt="360 Breathing" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="360 Breathing"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">360° Rib Cage Breathing</div>
+            <span class="ex-sets">3 sets × 8 breaths</span>
+            <p class="ex-desc">Sit or lie comfortably. Place your hands around your lower rib cage. Breathe in and feel your ribs expand in all directions — front, sides, and back. Exhale and feel them gently compress. This activates the full core canister.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Imagine your rib cage as an umbrella opening on the inhale and closing on the exhale.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="1Y0YjXS9sKI">
+            <img class="thumb-img" src="https://img.youtube.com/vi/1Y0YjXS9sKI/hqdefault.jpg" alt="Cat Cow Stretch" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Cat Cow Stretch"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Cat-Cow Stretch</div>
+            <span class="ex-sets">2 sets × 10 slow reps</span>
+            <p class="ex-desc">On hands and knees, wrists under shoulders, knees under hips. Inhale and let your belly drop toward the floor (cow). Exhale and round your spine toward the ceiling (cat). Move slowly and mindfully, syncing breath with movement.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Move gently — this is a mobility exercise, not a stretch. Avoid any sharp pain.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="PkFu8ee6IuY">
+            <img class="thumb-img" src="https://img.youtube.com/vi/PkFu8ee6IuY/hqdefault.jpg" alt="Wall Push-Ups" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Wall Push-Ups"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Wall Push-Ups</div>
+            <span class="ex-sets">2 sets × 10 reps</span>
+            <p class="ex-desc">Stand facing a wall, hands at chest height. Step back so arms are nearly straight. Bend elbows to bring your chest toward the wall, keeping a straight line from head to heels. Exhale as you push back. Gentle upper body reactivation.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Engage your core gently throughout. Don't let your lower back arch.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Session 3 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S3</div>
+        <div>
+          <div class="session-title">Session 3 — Gentle Walking & Core</div>
+          <div class="session-meta">~20 minutes · No equipment · Low intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="ThKahimNQP0">
+            <img class="thumb-img" src="https://img.youtube.com/vi/ThKahimNQP0/hqdefault.jpg" alt="Breathing with Core" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Breathing with Core"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Breathing with Core Engagement</div>
+            <span class="ex-sets">3 sets × 10 breaths</span>
+            <p class="ex-desc">Seated or lying down, practice coordinating your breath with a gentle core draw-in. On the exhale, gently draw your navel toward your spine without holding your breath. This is the foundation of all postpartum core work.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Think "gentle hug" not "suck in." The engagement should be subtle, about 30% effort.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="AfyIQu8nTcI">
+            <img class="thumb-img" src="https://img.youtube.com/vi/AfyIQu8nTcI/hqdefault.jpg" alt="Pelvic Floor Pulses" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Pelvic Floor Pulses"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Pelvic Floor Quick Flicks</div>
+            <span class="ex-sets">3 sets × 10 quick pulses</span>
+            <p class="ex-desc">Lying on your back, perform rapid, short contractions of your pelvic floor — contract and release quickly. These "quick flicks" train the fast-twitch pelvic floor fibers that respond to sudden pressure (coughing, sneezing, laughing).</p>
+            <div class="ex-tip"><strong>Tip:</strong> Rest 30 seconds between sets. Quality over quantity — stop if you feel fatigue.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="6-anByqnKp8">
+            <img class="thumb-img" src="https://img.youtube.com/vi/6-anByqnKp8/hqdefault.jpg" alt="Heel Slides Progression" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Heel Slides Progression"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Heel Slides (Both Legs)</div>
+            <span class="ex-sets">3 sets × 8 reps each side</span>
+            <p class="ex-desc">Progress from Session 1 by adding a gentle pelvic floor contraction as you slide the heel out. Exhale and engage your core and pelvic floor simultaneously as the leg extends. This builds coordination between your deep core muscles.</p>
+            <div class="ex-tip"><strong>Tip:</strong> If you feel any doming in your abdomen, reduce the range of motion.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- /week1 -->
+
+  <!-- ══════════ WEEK 2 ══════════ -->
+  <div id="week2" class="week-panel w2">
+    <div class="week-intro">
+      <div class="week-icon">🌿</div>
+      <div>
+        <span class="week-tag">Week 2</span>
+        <h2>Activate & Stabilize</h2>
+        <p>You've reconnected with your breath and pelvic floor. Now we add gentle stability exercises to begin rebuilding your core, glutes, and postural muscles. Move slowly and with intention.</p>
+      </div>
+    </div>
+
+    <!-- Session 1 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S1</div>
+        <div>
+          <div class="session-title">Session 1 — Core & Glute Activation</div>
+          <div class="session-meta">~20 minutes · No equipment · Low-moderate intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="ww-6lRXvI9Y">
+            <img class="thumb-img" src="https://img.youtube.com/vi/ww-6lRXvI9Y/hqdefault.jpg" alt="Bird Dog" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Bird Dog"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Bird Dog</div>
+            <span class="ex-sets">3 sets × 8 reps each side</span>
+            <p class="ex-desc">On hands and knees, engage your core. Slowly extend your right arm forward and left leg back, forming a straight line. Hold 2 seconds, return with control. Alternate sides. Builds deep core stability and back strength without spinal loading.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Keep your hips level — imagine balancing a glass of water on your lower back.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="Z-HldsJwzPI">
+            <img class="thumb-img" src="https://img.youtube.com/vi/Z-HldsJwzPI/hqdefault.jpg" alt="Glute Bridge" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Glute Bridge"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Glute Bridge</div>
+            <span class="ex-sets">3 sets × 12 reps</span>
+            <p class="ex-desc">Lie on your back, knees bent, feet flat. Exhale and squeeze your glutes to lift your hips until your body forms a straight line from knees to shoulders. Hold 2 seconds at the top, then lower slowly. Strengthens glutes, hamstrings, and pelvic floor.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Drive through your heels, not your toes. Avoid overarching your lower back at the top.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="Ibqkscks9Lc">
+            <img class="thumb-img" src="https://img.youtube.com/vi/Ibqkscks9Lc/hqdefault.jpg" alt="Modified Plank" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Modified Plank"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Modified Plank (Knees Down)</div>
+            <span class="ex-sets">3 sets × 15–20 sec hold</span>
+            <p class="ex-desc">Start on forearms and knees, forming a straight line from knees to shoulders. Engage your core gently — no breath-holding. This pelvic-floor-friendly plank variation builds core endurance without excessive intra-abdominal pressure.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Stop immediately if you see any abdominal doming or feel pelvic pressure.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Session 2 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S2</div>
+        <div>
+          <div class="session-title">Session 2 — Balance & Coordination</div>
+          <div class="session-meta">~20 minutes · No equipment · Low-moderate intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="GrzzMjjLQuM">
+            <img class="thumb-img" src="https://img.youtube.com/vi/GrzzMjjLQuM/hqdefault.jpg" alt="Standing Marches" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Standing Marches"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Standing Marches</div>
+            <span class="ex-sets">3 sets × 20 steps (10 each leg)</span>
+            <p class="ex-desc">Stand tall with feet hip-width apart. Slowly lift one knee to hip height, hold 1 second, lower with control. Alternate legs. Engages your core, hip flexors, and challenges single-leg balance — essential for functional postpartum recovery.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Hold a wall or chair for support if needed. Focus on slow, controlled movement.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="Z-HldsJwzPI">
+            <img class="thumb-img" src="https://img.youtube.com/vi/Z-HldsJwzPI/hqdefault.jpg" alt="Single Leg Glute Bridge" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Single Leg Glute Bridge"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Glute Bridge with March</div>
+            <span class="ex-sets">3 sets × 8 reps each side</span>
+            <p class="ex-desc">Perform a glute bridge, then at the top, slowly lift one knee toward your chest while maintaining hip height. Lower the foot, then lower your hips. This progression challenges pelvic stability and single-leg glute strength.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Keep your hips level when lifting the knee. Don't let the opposite hip drop.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="ww-6lRXvI9Y">
+            <img class="thumb-img" src="https://img.youtube.com/vi/ww-6lRXvI9Y/hqdefault.jpg" alt="Bird Dog Progression" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Bird Dog Progression"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Bird Dog with Elbow-to-Knee</div>
+            <span class="ex-sets">3 sets × 8 reps each side</span>
+            <p class="ex-desc">From the bird dog position, after extending arm and leg, slowly bring your elbow and knee together under your body (rounding slightly), then extend back out. This adds a gentle rotational core challenge while maintaining spinal stability.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Move slowly and with control. Breathe out as you bring elbow to knee.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Session 3 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S3</div>
+        <div>
+          <div class="session-title">Session 3 — Full Body Gentle Circuit</div>
+          <div class="session-meta">~25 minutes · No equipment · Moderate intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="PkFu8ee6IuY">
+            <img class="thumb-img" src="https://img.youtube.com/vi/PkFu8ee6IuY/hqdefault.jpg" alt="Wall Push-Ups" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Wall Push-Ups"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Wall Push-Ups (Progression)</div>
+            <span class="ex-sets">3 sets × 12 reps</span>
+            <p class="ex-desc">Progress from Week 1 by stepping slightly further from the wall, increasing the challenge. Focus on a straight body line and controlled breathing. Builds upper body and core strength in a pelvic-floor-safe position.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Exhale on the push away from the wall. Keep your core gently engaged throughout.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="Z-HldsJwzPI">
+            <img class="thumb-img" src="https://img.youtube.com/vi/Z-HldsJwzPI/hqdefault.jpg" alt="Glute Bridge Hold" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Glute Bridge Hold"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Glute Bridge Isometric Hold</div>
+            <span class="ex-sets">3 sets × 30 sec hold</span>
+            <p class="ex-desc">Lift into a glute bridge and hold the position for 30 seconds, breathing normally throughout. This builds glute and hamstring endurance while training your core to maintain stability under sustained load.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Keep breathing! Never hold your breath during isometric holds.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="Ibqkscks9Lc">
+            <img class="thumb-img" src="https://img.youtube.com/vi/Ibqkscks9Lc/hqdefault.jpg" alt="Modified Plank Progression" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Modified Plank Progression"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Modified Plank (Extended Hold)</div>
+            <span class="ex-sets">3 sets × 25–30 sec hold</span>
+            <p class="ex-desc">Progress from Session 1 by extending your hold time. Focus on maintaining a neutral spine and breathing rhythmically. If you feel any pelvic pressure or doming, reduce the hold time and consult a pelvic floor PT.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Squeeze your glutes gently during the hold to reduce lower back strain.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- /week2 -->
+
+  <!-- ══════════ WEEK 3 ══════════ -->
+  <div id="week3" class="week-panel w3">
+    <div class="week-intro">
+      <div class="week-icon">🌸</div>
+      <div>
+        <span class="week-tag">Week 3</span>
+        <h2>Strengthen & Mobilize</h2>
+        <p>Your foundation is building. This week introduces functional movements like squats and side-lying exercises. Continue to prioritize breath coordination and pelvic floor awareness with every rep.</p>
+      </div>
+    </div>
+
+    <!-- Session 1 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S1</div>
+        <div>
+          <div class="session-title">Session 1 — Lower Body Strength</div>
+          <div class="session-meta">~25 minutes · No equipment · Moderate intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="aKyxwDfdgEg">
+            <img class="thumb-img" src="https://img.youtube.com/vi/aKyxwDfdgEg/hqdefault.jpg" alt="Bodyweight Squat" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Bodyweight Squat"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Bodyweight Squat</div>
+            <span class="ex-sets">3 sets × 12 reps</span>
+            <p class="ex-desc">Stand with feet shoulder-width apart, toes slightly turned out. Inhale as you sit back and down, keeping your chest up and knees tracking over toes. Exhale and squeeze your glutes as you stand. A fundamental functional movement for postpartum recovery.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Exhale on the way up. If you feel pelvic pressure, reduce depth and consult your provider.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="Z-HldsJwzPI">
+            <img class="thumb-img" src="https://img.youtube.com/vi/Z-HldsJwzPI/hqdefault.jpg" alt="Side-Lying Leg Lifts" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Side-Lying Leg Lifts"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Side-Lying Leg Lifts</div>
+            <span class="ex-sets">3 sets × 15 reps each side</span>
+            <p class="ex-desc">Lie on your side with legs stacked. Keeping your top leg straight, lift it to about 45 degrees, then lower with control. Targets the glute medius — a key muscle for pelvic stability, hip strength, and preventing lower back pain.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Keep your core engaged and avoid rolling your hips backward as you lift.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="PGDnZ-sCC_o">
+            <img class="thumb-img" src="https://img.youtube.com/vi/PGDnZ-sCC_o/hqdefault.jpg" alt="Cat Cow Progression" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Cat Cow Progression"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Cat-Cow with Hip Circles</div>
+            <span class="ex-sets">2 sets × 10 reps each direction</span>
+            <p class="ex-desc">From the cat-cow position, add gentle hip circles — slowly rotating your hips in a circle while maintaining a neutral spine. This improves hip mobility, relieves lower back tension, and gently warms up the entire core and pelvis.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Keep the circles small and controlled. Breathe continuously throughout.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Session 2 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S2</div>
+        <div>
+          <div class="session-title">Session 2 — Upper Body & Core</div>
+          <div class="session-meta">~25 minutes · Optional resistance band · Moderate intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="ww-6lRXvI9Y">
+            <img class="thumb-img" src="https://img.youtube.com/vi/ww-6lRXvI9Y/hqdefault.jpg" alt="Bird Dog Slow" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Bird Dog Slow"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Bird Dog (Slow & Controlled)</div>
+            <span class="ex-sets">3 sets × 10 reps each side</span>
+            <p class="ex-desc">Progress from Week 2 by slowing down each rep — take 3 seconds to extend, hold 3 seconds, take 3 seconds to return. This time-under-tension approach significantly increases the core stability challenge without adding load.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Breathe throughout. Exhale on the extension, inhale on the return.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="PkFu8ee6IuY">
+            <img class="thumb-img" src="https://img.youtube.com/vi/PkFu8ee6IuY/hqdefault.jpg" alt="Standing Rows" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Standing Rows"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Standing Rows (Band or Towel)</div>
+            <span class="ex-sets">3 sets × 12 reps</span>
+            <p class="ex-desc">Anchor a resistance band or hold a towel around a door handle. Stand with slight knee bend, hinge slightly forward. Pull the band toward your lower ribs, squeezing your shoulder blades together. Strengthens the upper back and improves posture for nursing/carrying.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Keep your core engaged and avoid shrugging your shoulders. Exhale on the pull.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="Ibqkscks9Lc">
+            <img class="thumb-img" src="https://img.youtube.com/vi/Ibqkscks9Lc/hqdefault.jpg" alt="Side Plank Modified" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Side Plank Modified"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Modified Side Plank</div>
+            <span class="ex-sets">3 sets × 20 sec each side</span>
+            <p class="ex-desc">Lie on your side, propped on your forearm with knees bent. Lift your hips to form a straight line from knees to shoulders. Hold, breathing normally. Targets the obliques and lateral core without excessive pelvic floor pressure.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Stack your hips directly on top of each other. Don't let your top hip roll forward.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Session 3 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S3</div>
+        <div>
+          <div class="session-title">Session 3 — Full Body Integration</div>
+          <div class="session-meta">~30 minutes · No equipment · Moderate intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="aKyxwDfdgEg">
+            <img class="thumb-img" src="https://img.youtube.com/vi/aKyxwDfdgEg/hqdefault.jpg" alt="Squat to Stand" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Squat to Stand"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Squat with Pause</div>
+            <span class="ex-sets">3 sets × 10 reps</span>
+            <p class="ex-desc">Perform a bodyweight squat, pausing for 2 seconds at the bottom before standing. This pause increases time under tension and improves hip mobility. Focus on keeping your heels down and chest tall throughout the movement.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Breathe in on the way down, exhale and engage your pelvic floor as you stand.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="GrzzMjjLQuM">
+            <img class="thumb-img" src="https://img.youtube.com/vi/GrzzMjjLQuM/hqdefault.jpg" alt="Standing March Progression" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Standing March Progression"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Standing March with Arm Swing</div>
+            <span class="ex-sets">3 sets × 30 steps</span>
+            <p class="ex-desc">Progress from Week 2 by adding an opposite arm swing as you march. This cross-body coordination pattern activates your deep core and mimics natural walking mechanics, preparing your body for more dynamic movement.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Keep your core gently engaged and stand tall. Don't lean to the side as you lift each knee.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="1Y0YjXS9sKI">
+            <img class="thumb-img" src="https://img.youtube.com/vi/1Y0YjXS9sKI/hqdefault.jpg" alt="Cat Cow Cool Down" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Cat Cow Cool Down"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Cat-Cow Cool Down Flow</div>
+            <span class="ex-sets">2 sets × 12 slow reps</span>
+            <p class="ex-desc">End your session with a slow, mindful cat-cow flow. Use this as a moving meditation — connect with your breath, release tension from your spine, and check in with how your body feels. A perfect way to close any postpartum workout.</p>
+            <div class="ex-tip"><strong>Tip:</strong> There's no rush. Let each breath guide the movement. This is your recovery time.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- /week3 -->
+
+  <!-- ══════════ WEEK 4 ══════════ -->
+  <div id="week4" class="week-panel w4">
+    <div class="week-intro">
+      <div class="week-icon">🌼</div>
+      <div>
+        <span class="week-tag">Week 4</span>
+        <h2>Build & Progress</h2>
+        <p>You've built a solid foundation. This week introduces more challenging movements like lunges and hip hinges. Continue to listen to your body — this is a progression, not a race. Celebrate how far you've come!</p>
+      </div>
+    </div>
+
+    <!-- Session 1 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S1</div>
+        <div>
+          <div class="session-title">Session 1 — Strength & Power Foundation</div>
+          <div class="session-meta">~30 minutes · No equipment · Moderate-high intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="wrwwXE_x-pQ">
+            <img class="thumb-img" src="https://img.youtube.com/vi/wrwwXE_x-pQ/hqdefault.jpg" alt="Reverse Lunge" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Reverse Lunge"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Reverse Lunge</div>
+            <span class="ex-sets">3 sets × 10 reps each leg</span>
+            <p class="ex-desc">Stand tall, step one foot back and lower your back knee toward the floor. Keep your front knee over your ankle. Push through your front heel to return to standing. Reverse lunges are gentler on the knees than forward lunges and great for postpartum glute and quad strength.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Exhale as you push back to standing. Hold a wall for balance if needed.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="WqxfL0RMDbw">
+            <img class="thumb-img" src="https://img.youtube.com/vi/WqxfL0RMDbw/hqdefault.jpg" alt="Bodyweight Deadlift" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Bodyweight Deadlift"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Bodyweight Hip Hinge (Deadlift)</div>
+            <span class="ex-sets">3 sets × 12 reps</span>
+            <p class="ex-desc">Stand with feet hip-width apart. Push your hips back as you hinge forward, keeping a flat back and soft knees. Reach your hands toward your shins, feeling a stretch in your hamstrings. Drive through your heels and squeeze your glutes to stand. Builds posterior chain strength.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Think "hips back" not "bend forward." Keep your spine neutral throughout.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="Ibqkscks9Lc">
+            <img class="thumb-img" src="https://img.youtube.com/vi/Ibqkscks9Lc/hqdefault.jpg" alt="Full Plank Hold" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Full Plank Hold"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Plank Hold (Progress to Toes)</div>
+            <span class="ex-sets">3 sets × 20–30 sec hold</span>
+            <p class="ex-desc">If you've been symptom-free with the modified plank, try progressing to a full forearm plank on your toes. Maintain a straight line from head to heels, breathe normally, and stop immediately if you feel any pelvic pressure or see abdominal doming.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Only progress to toes if the modified version feels completely comfortable. There's no rush.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Session 2 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S2</div>
+        <div>
+          <div class="session-title">Session 2 — Cardio Integration</div>
+          <div class="session-meta">~30 minutes · No equipment · Moderate-high intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="GrzzMjjLQuM">
+            <img class="thumb-img" src="https://img.youtube.com/vi/GrzzMjjLQuM/hqdefault.jpg" alt="March Intervals" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="March Intervals"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Light Cardio Intervals (Marching)</div>
+            <span class="ex-sets">4 rounds × 45 sec on / 30 sec rest</span>
+            <p class="ex-desc">March in place with high knees and arm swings for 45 seconds, then rest for 30 seconds. This gentle cardio interval builds cardiovascular endurance without the impact of running. Listen to your body — reduce intensity if you feel any pelvic symptoms.</p>
+            <div class="ex-tip"><strong>Tip:</strong> This is NOT the time to push through discomfort. Modify to slow marching if needed.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="aKyxwDfdgEg">
+            <img class="thumb-img" src="https://img.youtube.com/vi/aKyxwDfdgEg/hqdefault.jpg" alt="Squat Pulses" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Squat Pulses"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Squat with Pulse</div>
+            <span class="ex-sets">3 sets × 10 reps + 5 pulses</span>
+            <p class="ex-desc">Perform a bodyweight squat, then at the bottom, add 5 small pulses before standing. This increases time under tension and builds quad and glute endurance. Coordinate your breath — exhale on the way up from the pulses.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Keep your weight in your heels and your chest lifted throughout the pulses.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="ww-6lRXvI9Y">
+            <img class="thumb-img" src="https://img.youtube.com/vi/ww-6lRXvI9Y/hqdefault.jpg" alt="Bird Dog Circuit" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Bird Dog Circuit"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Bird Dog Circuit (Timed)</div>
+            <span class="ex-sets">3 sets × 40 sec continuous</span>
+            <p class="ex-desc">Perform bird dogs continuously for 40 seconds, alternating sides with a slow, controlled rhythm. This timed format builds core endurance and challenges your ability to maintain stability under fatigue — a key milestone in postpartum recovery.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Quality over speed. Slow down if your form breaks down.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Session 3 -->
+    <div class="session">
+      <div class="session-header">
+        <div class="session-num">S3</div>
+        <div>
+          <div class="session-title">Session 3 — Full Body Strength Circuit</div>
+          <div class="session-meta">~35 minutes · No equipment · Moderate-high intensity</div>
+        </div>
+      </div>
+      <div class="exercises-grid">
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="wrwwXE_x-pQ">
+            <img class="thumb-img" src="https://img.youtube.com/vi/wrwwXE_x-pQ/hqdefault.jpg" alt="Alternating Lunges" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Alternating Lunges"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Alternating Reverse Lunges</div>
+            <span class="ex-sets">3 sets × 12 reps (6 each leg)</span>
+            <p class="ex-desc">Alternate legs with each reverse lunge, building a continuous rhythm. This challenges your balance, coordination, and cardiovascular system while strengthening your glutes, quads, and core. A great functional movement for daily life with a baby.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Exhale on each push-up to standing. Keep your torso upright throughout.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="WqxfL0RMDbw">
+            <img class="thumb-img" src="https://img.youtube.com/vi/WqxfL0RMDbw/hqdefault.jpg" alt="Hip Hinge to Row" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Hip Hinge to Row"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Hip Hinge with Arm Reach</div>
+            <span class="ex-sets">3 sets × 12 reps</span>
+            <p class="ex-desc">Combine the hip hinge with an overhead arm reach at the top of the movement. As you stand from the hinge, reach both arms overhead, then lower them as you hinge back. This full-body movement improves coordination and builds functional strength.</p>
+            <div class="ex-tip"><strong>Tip:</strong> Keep your core engaged throughout. Breathe in on the hinge, out on the stand and reach.</div>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <div class="video-wrap" data-vid="AfyIQu8nTcI">
+            <img class="thumb-img" src="https://img.youtube.com/vi/AfyIQu8nTcI/hqdefault.jpg" alt="Pelvic Floor Cool Down" loading="lazy">
+            <div class="play-overlay"><div class="play-btn-circle"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+            <iframe src="" allow="autoplay; encrypted-media" allowfullscreen title="Pelvic Floor Cool Down"></iframe>
+          </div>
+          <div class="ex-body">
+            <div class="ex-name">Pelvic Floor Cool Down & Check-In</div>
+            <span class="ex-sets">5 minutes · Lying down</span>
+            <p class="ex-desc">End every workout — especially this final session — with a pelvic floor cool down. Lie on your back, perform 10 slow diaphragmatic breaths, then 5 gentle pelvic floor contractions and full releases. Check in with your body: any symptoms? Any discomfort? Celebrate your 4-week journey!</p>
+            <div class="ex-tip"><strong>Tip:</strong> You've completed 4 weeks! Consider seeing a pelvic floor PT for a personalized assessment before progressing further.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- /week4 -->
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer>
+  <p class="heart">🌸</p>
+  <p><strong>You are doing an incredible job.</strong> Postpartum recovery is not linear — some days will feel harder than others, and that's completely normal.</p>
+  <p>This plan is for informational purposes only and is not a substitute for personalized medical advice. Always consult your healthcare provider or a pelvic floor physiotherapist before starting or progressing your postpartum exercise program.</p>
+  <p style="margin-top:16px; font-size:12px; opacity:0.7;">Hover over any video thumbnail to preview · Click to play · Tap on mobile</p>
+</footer>
+
+<script>
+// ── TAB SWITCHING ──────────────────────────────────────────
+function switchTab(n) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.week-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn')[n - 1].classList.add('active');
+  document.getElementById('week' + n).classList.add('active');
+  stopAllVideos();
+}
+
+// ── VIDEO HOVER / CLICK LOGIC ──────────────────────────────
+function buildSrc(vid, autoplay) {
+  return 'https://www.youtube-nocookie.com/embed/' + vid +
+    '?autoplay=' + (autoplay ? 1 : 0) +
+    '&mute=1&rel=0&modestbranding=1&enablejsapi=1';
+}
+
+function stopAllVideos() {
+  document.querySelectorAll('.video-wrap.playing').forEach(w => {
+    w.classList.remove('playing');
+    w.querySelector('iframe').src = '';
+  });
+}
+
+function isMobile() {
+  return window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+}
+
+document.querySelectorAll('.video-wrap').forEach(wrap => {
+  const vid = wrap.dataset.vid;
+  const iframe = wrap.querySelector('iframe');
+
+  if (isMobile()) {
+    // Mobile: tap to play
+    wrap.addEventListener('click', () => {
+      if (wrap.classList.contains('playing')) {
+        wrap.classList.remove('playing');
+        iframe.src = '';
+      } else {
+        stopAllVideos();
+        iframe.src = buildSrc(vid, true);
+        wrap.classList.add('playing');
+      }
+    });
+  } else {
+    // Desktop: hover to play muted, leave to stop
+    let hoverTimer;
+    wrap.addEventListener('mouseenter', () => {
+      hoverTimer = setTimeout(() => {
+        if (!wrap.classList.contains('playing')) {
+          iframe.src = buildSrc(vid, true);
+          wrap.classList.add('playing');
+        }
+      }, 300);
+    });
+    wrap.addEventListener('mouseleave', () => {
+      clearTimeout(hoverTimer);
+      wrap.classList.remove('playing');
+      iframe.src = '';
+    });
+    // Click to open in new tab for full experience
+    wrap.addEventListener('click', (e) => {
+      window.open('https://www.youtube.com/watch?v=' + vid, '_blank');
+    });
+  }
+});
+
+// ── JOURNEY DOT SCROLL ─────────────────────────────────────
+document.querySelectorAll('.journey-dot').forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    document.querySelector('.tabs-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>
