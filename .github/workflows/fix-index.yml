@@ -1,0 +1,49 @@
+name: Fix index.html (byte-exact)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fix-index.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch source and strip injected guard
+        run: |
+          set -euo pipefail
+          URL='https://static.teamily.ai/sites/fa361f7d-0541-408e-a62b-d78de5d0dc3c/webpages/postpartum-workout/index.html?tk=c2l0ZTpmYTM2MWY3ZC0wNTQxLTQwOGUtYTYyYi1kNzhkZTVkMGRjM2Mvd2VicGFnZXMvcG9zdHBhcnR1bS13b3Jrb3V0OjE3OTE5MDU1ODE.Yjc4MmVjYTFlN2RmMjRlYzMxMTg3OWE2MzRlY2U5NmM'
+          curl -sSL --fail --retry 3 "$URL" -o raw.html
+          echo "raw size: $(stat -c%s raw.html)"
+          python3 - <<'PY'
+          import re
+          s = open('raw.html', encoding='utf-8').read()
+          s = re.sub(r'<script data-tmly-media-guard="1">.*?</script>', '', s, count=1, flags=re.S)
+          open('index.html', 'w', encoding='utf-8', newline='').write(s)
+          print('stripped size:', len(s.encode('utf-8')))
+          PY
+          echo "size: $(stat -c%s index.html)"
+          echo "sha1: $(sha1sum index.html | cut -d' ' -f1)"
+          echo "blob: $(git hash-object index.html)"
+          test "$(stat -c%s index.html)" = "67936"
+          test "$(sha1sum index.html | cut -d' ' -f1)" = "8a9b240b985bbceafd48215d78bbe912dffdffe4"
+
+      - name: Commit byte-exact index.html
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "No change needed"
+          else
+            git commit -m "fix: byte-exact index.html (strip injected data-tmly-media-guard)"
+            git push
+          fi
